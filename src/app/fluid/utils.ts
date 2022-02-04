@@ -10,6 +10,7 @@ import {
 }                                 from "fluid-framework";
 
 import { environment } from "src/environments/environment";
+import { FluidModel } from "./fluid.model";
 
 export function getContainerId(): ({ containerId: string, isNew: boolean }) {
   let containerId = '';
@@ -33,7 +34,7 @@ export function getContainerId(): ({ containerId: string, isNew: boolean }) {
   return ({ containerId, isNew });
 }
 
-export async function getFluidContainer(): Promise<{ container: IFluidContainer, services: AzureContainerServices }> {
+export async function getFluidContainer(): Promise<FluidModel> {
     let { containerId, isNew } = getContainerId();
 
   const client = new AzureClient(getConnectionConfig());

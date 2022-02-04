@@ -1,3 +1,18 @@
-  <div>
-    Test
-  </div>
+  <mat-toolbar>
+    <div *ngFor="let user of users | keyvalue">
+    👋 {{user.value.userName}}
+    </div>
+</mat-toolbar>
+<div class="content">
+  <button mat-raised-button color="primary"
+    (click)="sayHello()">
+    Say Hello
+  </button>
+    <button mat-raised-button color="primary"
+    (click)="clear()">
+    Clear
+  </button>
+  <mat-label *ngFor="let entry of messages" class="date">
+    {{entry.greeting.userName}} 👉 {{entry.greeting.message}}
+  </mat-label>
+</div>

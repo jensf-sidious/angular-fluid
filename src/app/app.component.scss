@@ -1,0 +1,15 @@
+.content {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  button, mat-label {
+    width: 94%;
+    max-width: 400px;
+    margin-top: 10px;
+  }
+}
